@@ -55,7 +55,7 @@ export default function Hero() {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-base lg:text-lg">Secure Transport</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">Your cargo's safety is our priority</p>
+                  <p className="text-gray-300 text-xs lg:text-sm">Your cargo&apos;s safety is our priority</p>
                 </div>
               </div>
             </div>

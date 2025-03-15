@@ -7,7 +7,6 @@ export default function Contact() {
   const [showNotification, setShowNotification] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const RECIPIENT_EMAIL = 'ambay@hotmail.de'; // This is where messages will be sent to
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
