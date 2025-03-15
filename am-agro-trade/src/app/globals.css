@@ -24,11 +24,3 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-/* .nav-link {
-  @apply text-gray-700 hover:text-emerald-600 px-3 py-2 rounded-md text-sm font-medium transition-colors;
-}
-
-.mobile-nav-link {
-  @apply block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 transition-colors w-full text-left;
-} */
