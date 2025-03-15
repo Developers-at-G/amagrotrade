@@ -16,45 +16,51 @@
 }
 
 .services {
-  background-color: #f8f9fa;
+  background-color: #f7f9f5;
 }
 
 .serviceCard {
   background-color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
 }
 
 .serviceCard:hover {
   transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .serviceCard h3 {
   color: #1a202c;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #48BB78;
+  padding-bottom: 0.75rem;
 }
 
 .serviceCard ul {
   list-style-type: none;
   padding: 0;
+  margin-top: 1rem;
 }
 
 .serviceCard li {
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.75rem;
   position: relative;
-  color: #4a5568;
+  color: #1a202c;
+  line-height: 1.6;
 }
 
 .serviceCard li:before {
-  content: "•";
+  content: "→";
   position: absolute;
   left: 0;
-  color: #4a5568;
+  color: #48BB78;
 }
 
 @media (max-width: 768px) {
