@@ -1,5 +1,4 @@
-'use client'
-
+'use client';
 import Hero from './Components/Hero'
 import Services from './services/services'
 import Contact from './contact/contact'
