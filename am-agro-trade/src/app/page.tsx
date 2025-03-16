@@ -4,8 +4,12 @@ import Hero from './Components/Hero'
 import Services from './services/services'
 import Contact from './contact/contact'
 import BusinessPartnership from './Components/BusinessPartnership'
+import Navbar from './Components/Navbar'
 export default function Home() {
   return (
+    <>
+    <Navbar />
+
     <main className="min-h-screen pt-16">
       <div id="hero" className="animate-fadeIn">
         <Hero />
@@ -73,5 +77,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   )
 }
