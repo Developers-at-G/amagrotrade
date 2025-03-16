@@ -49,80 +49,104 @@ const ContactForm = () => {
 
   return (
     <>
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="container mx-auto px-4 py-12 max-w-6xl"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Form Section */}
-          <div className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm">
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">{t('contact.form.title')}</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">{t('contact.form.name')}</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-gray-700 font-medium mb-2">{t('contact.form.email')}</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-700 font-medium mb-2">{t('contact.form.message')}</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 resize-none"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-emerald-600 to-emerald-500 text-white py-3 px-6 rounded-lg hover:from-emerald-700 hover:to-emerald-600 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed font-medium text-lg shadow-lg hover:shadow-xl"
-              >
-                {isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
-              </button>
-            </form>
-          </div>
-          
-          {/* Contact Information Section */}
-          <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] text-white">
-            <h3 className="text-3xl font-bold mb-8">{t('contact.info.title')}</h3>
-            <div className="space-y-6">
-              <motion.div 
-                whileHover={{ scale: 1.02 }}
-                className="flex items-center space-x-4 p-4 rounded-lg hover:bg-emerald-600/50 transition-all duration-300"
-              >
-                <div className="bg-white/10 p-3 rounded-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <div className="relative min-h-[600px] overflow-hidden bg-gradient-to-b from-emerald-50 to-white dark:from-emerald-950 dark:to-gray-900">
+        {/* Animated background elements */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="absolute inset-0"
+        >
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto px-4 py-24 relative z-10"
+        >
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-emerald-900 dark:text-emerald-100 mb-6">
+                {t('contact.info.title')}
+              </h2>
+              <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  title: 'AM Agro Trade',
+                  content: 'Your Trusted Agricultural Partner',
+                  icon: (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-medium text-lg">AM Agro Trade</p>
-                  <p className="text-emerald-100 mt-1">Your Trusted Agricultural Partner</p>
-                </div>
-              </motion.div>
-              {/* Add similar motion.div blocks for phone, email, and address with appropriate icons */}
+                  ),
+                  delay: 0.3
+                },
+                {
+                  title: t('contact.info.phone'),
+                  content: '+49 (1520) 168-1965',
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  ),
+                  href: 'tel:+4915201681965',
+                  delay: 0.4
+                },
+                {
+                  title: t('contact.info.email'),
+                  content: 'info@amagrotrade.com',
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  ),
+                  href: 'mailto:info@amagrotrade.com',
+                  delay: 0.5
+                }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  whileHover={{ y: -5 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: item.delay }}
+                  className="relative group"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl blur-sm group-hover:blur transition-all duration-300"></div>
+                  <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        {item.icon}
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-center text-gray-900 dark:text-white mb-3">
+                      {item.title}
+                    </h3>
+                    {item.href ? (
+                      <a 
+                        href={item.href}
+                        className="text-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 block transition-colors"
+                      >
+                        {item.content}
+                      </a>
+                    ) : (
+                      <p className="text-center text-gray-600 dark:text-gray-300">
+                        {item.content}
+                      </p>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
       <Notification 
         show={showNotification}
         message={isError ? t('contact.form.error') : t('contact.form.success')}

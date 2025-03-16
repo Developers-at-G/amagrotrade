@@ -17,7 +17,7 @@ const Navbar = () => {
         });
       },
       { 
-        threshold: 1,
+        threshold: .8,
         rootMargin: '-50px 0px'
       }
     );

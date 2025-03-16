@@ -1,8 +1,37 @@
 import { useLanguage } from '../context/LanguageContext';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   const { t } = useLanguage();
   
+  // Add animation variants for the glowing text effect
+  const glowVariants = {
+    animate: {
+      textShadow: [
+        "0 0 4px rgba(74, 222, 128, 0)",
+        "0 0 8px rgba(74, 222, 128, 0.3)",
+        "0 0 4px rgba(74, 222, 128, 0)"
+      ],
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  // Gradient border animation
+  const borderVariants = {
+    animate: {
+      backgroundPosition: ["0% 0%", "100% 100%"],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    }
+  };
+
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Background image */}
@@ -22,20 +51,59 @@ export default function Hero() {
       {/* Content */}
       <div className="relative container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 sm:px-4">
         {/* Left content */}
-        <div className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24">
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
-            {t('hero.title')} <span className="text-green-400">Services</span>
-          </h1>
-          <p className="mt-6 text-base sm:text-lg lg:text-xl text-gray-200 max-w-xl leading-relaxed">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24"
+        >
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight"
+          >
+            {t('hero.title')} {' '}
+            <motion.span 
+              variants={glowVariants}
+              animate="animate"
+              className="text-green-400 inline-block"
+            >
+              Services
+            </motion.span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mt-6 text-base sm:text-lg lg:text-xl text-gray-200 max-w-xl leading-relaxed"
+          >
             {t('hero.subtitle')}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Feature cards - visible on all screens */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center relative mt-8 lg:mt-0">
-          <div className="space-y-4 mx-2 sm:mx-4 lg:mr-12">
+          <motion.div 
+            variants={borderVariants}
+            animate="animate"
+            className="space-y-4 mx-2 sm:mx-4 lg:mr-12"
+            style={{
+              background: "linear-gradient(90deg, rgba(74, 222, 128, 0.1) 0%, rgba(74, 222, 128, 0.2) 50%, rgba(74, 222, 128, 0.1) 100%)",
+              backgroundSize: "200% 200%"
+            }}
+          >
             {/* Feature Card 1 */}
-            <div className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl transform hover:-translate-y-1 transition-all duration-300 max-w-md">
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)"
+              }}
+              className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl transition-all duration-300 max-w-md"
+            >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
                   <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,10 +115,19 @@ export default function Hero() {
                   <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature1.description')}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Feature Card 2 */}
-            <div className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl transform hover:-translate-y-1 transition-all duration-300 max-w-md lg:translate-x-8">
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)"
+              }}
+              className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl lg:translate-x-8 max-w-md"
+            >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
                   <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,10 +139,19 @@ export default function Hero() {
                   <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature2.description')}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Feature Card 3 */}
-            <div className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl transform hover:-translate-y-1 transition-all duration-300 max-w-md">
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8, duration: 0.8 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)"
+              }}
+              className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl max-w-md"
+            >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
                   <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,12 +163,37 @@ export default function Hero() {
                   <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature3.description')}</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Decorative elements */}
-          <div className="absolute top-1/4 right-4 w-32 h-32 bg-green-400/20 rounded-full blur-2xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-8 w-24 h-24 bg-green-400/30 rounded-full blur-2xl animate-pulse delay-700" />
+          {/* Decorative elements with animation */}
+          <motion.div 
+            animate={{ 
+              y: [-10, 10, -10],
+              scale: [1, 1.2, 1],
+              opacity: [0.2, 0.3, 0.2] 
+            }}
+            transition={{ 
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut" 
+            }}
+            className="absolute top-1/4 right-4 w-32 h-32 bg-green-400/20 rounded-full blur-2xl"
+          />
+          
+          {/* Add a new floating element */}
+          <motion.div
+            animate={{
+              rotate: [0, 360],
+              opacity: [0.1, 0.3, 0.1]
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute -left-20 top-1/3 w-40 h-40 bg-green-400/10 rounded-full blur-3xl"
+          />
         </div>
       </div>
 
