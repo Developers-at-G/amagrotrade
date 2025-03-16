@@ -6,10 +6,10 @@ import BusinessPartnership from './Components/BusinessPartnership'
 import Navbar from './Components/Navbar'
 export default function Home() {
   return (
-    <>
+    <main>
     <Navbar />
 
-    <main className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16">
       <div id="hero" className="animate-fadeIn">
         <Hero />
       </div>
@@ -75,7 +75,7 @@ export default function Home() {
           <Contact />
         </div>
       </section>
+    </div>
     </main>
-    </>
   )
 }
