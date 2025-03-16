@@ -1,7 +1,7 @@
 'use client';
 import Hero from './Components/Hero'
 import Services from './services/services'
-import Contact from './contact/contact'
+import ContactForm from './ContactForm/ContactForm'
 import BusinessPartnership from './Components/BusinessPartnership'
 import Navbar from './Components/Navbar'
 export default function Home() {
@@ -72,7 +72,7 @@ export default function Home() {
       <section id="contact" className="py-10 sm:py-16 px-4 bg-emerald-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-emerald-800">Contact Us</h2>
-          <Contact />
+          <ContactForm />
         </div>
       </section>
     </div>

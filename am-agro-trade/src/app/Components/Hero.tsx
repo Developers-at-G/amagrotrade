@@ -5,7 +5,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 w-full h-full"
         style={{
-          backgroundImage: 'url("/Images/truck.jpeg")',
+          backgroundImage: 'url("/images/truck.jpeg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'scroll'

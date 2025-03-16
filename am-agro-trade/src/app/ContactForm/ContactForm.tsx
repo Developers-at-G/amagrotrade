@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Notification from '../Components/Notification';
 
-export default function Contact() {
+const ContactForm = () => {
   const [showNotification, setShowNotification] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -125,3 +125,5 @@ export default function Contact() {
     </>
   );
 }
+
+export default ContactForm;
