@@ -161,8 +161,7 @@ const BusinessPartnership = () => {
             <motion.h2 
               className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 leading-tight text-white"
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-200px" }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 1,
                 delay: 1,
@@ -174,8 +173,7 @@ const BusinessPartnership = () => {
             <motion.div 
               className="max-w-2xl space-y-4 md:space-y-6"
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-200px" }}
+              animate={{ opacity: 1 }}
               transition={{
                 duration: 1,
                 delay: 1.5,
