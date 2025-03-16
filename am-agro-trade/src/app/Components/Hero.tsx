@@ -45,9 +45,6 @@ export default function Hero() {
         }}
       />
       
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />
-
       {/* Content */}
       <div className="relative container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 sm:px-4">
         {/* Left content */}
@@ -55,19 +52,19 @@ export default function Hero() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24"
+          className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24 bg-black/15 backdrop-blur-[2px] rounded-xl"
         >
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight"
+            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
           >
             {t('hero.title')} {' '}
             <motion.span 
               variants={glowVariants}
               animate="animate"
-              className="text-green-400 inline-block"
+              className="text-green-400 inline-block drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
             >
               Services
             </motion.span>
@@ -76,7 +73,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-6 text-base sm:text-lg lg:text-xl text-gray-200 max-w-xl leading-relaxed"
+            className="mt-6 text-base sm:text-lg lg:text-xl text-white font-medium max-w-xl leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
           >
             {t('hero.subtitle')}
           </motion.p>
@@ -197,8 +194,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Subtle decorative elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/50 to-transparent" />
+      {/* Removed the bottom gradient */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-green-400/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
     </div>
   )

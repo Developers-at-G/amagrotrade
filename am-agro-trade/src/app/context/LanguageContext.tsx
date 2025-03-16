@@ -41,6 +41,14 @@ const translations = {
     'services.logistics.description': 'Comprehensive logistics management and warehousing',
     'services.trade.title': 'Trade',
     'services.trade.description': 'International trade facilitation and business connections',
+    'services.freightForwarding.title': 'Freight Forwarding',
+    'services.freightForwarding.description': 'Tailor-made transport solutions, national & international shipping (air and sea freight), direct and express deliveries',
+    'services.supplyChain.title': 'Supply Chain Management',
+    'services.supplyChain.description': 'Warehousing & distribution, supply chain optimization',
+    'services.procurement.title': 'Procurement & Sales',
+    'services.procurement.description': 'Import & export of goods, business brokerage',
+    'services.businessMatching.title': 'Business Matching',
+    'services.businessMatching.description': 'Matching shippers with carriers, customized business solutions',
 
     // Contact section
     'contact.title': 'Contact Us',
@@ -95,26 +103,34 @@ const translations = {
     // About section
     'about.title': 'Über Uns',
     'about.subtitle': 'Ihr zuverlässiger Partner für Transport & Handel',
-    'about.description1': 'AM Agro Trade Services e.K. ist ein innovatives Unternehmen, spezialisiert auf Transport, Logistik und Handel.',
-    'about.description2': 'Unsere Mission: Effiziente Verbindung von Unternehmen und Sicherstellung reibungsloser Abläufe in der gesamten Lieferkette.',
+    'about.description1': 'AM Agro Trade Services e.K. ist ein innovatives Unternehmen im Bereich Transport, Logistik und Handel',
+    'about.description2': 'Unsere Mission ist es, Unternehmen effizient miteinander zu vernetzen und reibungslose Abläufe entlang der gesamten Lieferkette zu gewährleisten',
 
     // Why Choose Us section
     'whyUs.title': 'Warum Uns Wählen?',
     'whyUs.expertise.title': 'Branchenexpertise',
     'whyUs.expertise.description': 'Jahrelange Erfahrung und fundiertes Branchenwissen für besseren Service',
-    'whyUs.solutions.title': 'Flexible Lösungen',
+    'whyUs.solutions.title': 'Flexibilität und Schnellreaktionszeiten',
     'whyUs.solutions.description': 'Maßgeschneiderte Ansätze für Ihre spezifischen Anforderungen',
-    'whyUs.network.title': 'Starkes Netzwerk',
+    'whyUs.network.title': 'Ein starkes Netzwerk aus Partnern',
     'whyUs.network.description': 'Umfangreiche Partnerschaften für zuverlässige und effiziente Servicebereitstellung',
 
     // Services section
-    'services.title': 'Unsere Dienstleistungen',
-    'services.transport.title': 'Transport',
+    'services.title': 'Unsere Leistungen',
+    'services.transport.title': 'National und internationale Transporte',
     'services.transport.description': 'Effiziente und zuverlässige Transportlösungen über Regionen hinweg',
-    'services.logistics.title': 'Logistik',
+    'services.logistics.title': 'Logistik – Effiziente Warenströme',
     'services.logistics.description': 'Umfassendes Logistikmanagement und Lagerhaltung',
     'services.trade.title': 'Handel',
     'services.trade.description': 'Internationale Handelserleichterung und Geschäftsverbindungen',
+    'services.freightForwarding.title': 'Spedition',
+    'services.freightForwarding.description': 'Maßgeschneiderte Transportlösungen (See- und Luftfracht/Straßenverkehr), nationale & internationale Transporte, Direkt- und Sonderfahrten',
+    'services.supplyChain.title': 'Logistik',
+    'services.supplyChain.description': 'Effiziente Warenströme, Lagerhaltung & Distribution',
+    'services.procurement.title': 'Handel',
+    'services.procurement.description': 'Beschaffung & Vertrieb, Import & Export von Waren',
+    'services.businessMatching.title': 'Vermittlung',
+    'services.businessMatching.description': 'Vermittlung von Transportaufträgen, Partnernetzwerk für Spedition, Logistik und Handel',
 
     // Contact section
     'contact.title': 'Kontakt',
@@ -130,23 +146,23 @@ const translations = {
     'hero.feature3.description': 'Verbunden über Kontinente hinweg',
 
     // Business Partnership Section
-    'partnership.title': 'Europa und Afrika verbinden – Geschäftspartner, Märkte & Chancen',
-    'partnership.intro1': 'Africa bietet enorme wirtschaftliche Potential, aber Unternehmen oft Schwierigkeiten, diese Märkte zu betreten. Wir schließen die Lücke zwischen den beiden Kontinenten und helfen Ihnen, die richtigen Partner zu finden.',
-    'partnership.intro2': 'Wir unterstützen Unternehmen aus Europa und Afrika bei der Aufbau erfolgreicher Geschäftsbeziehungen. Als Vermittler überwinden wir kulturelle, bürokratische und logistische Barrieren, um die richtigen Partner zu verbinden.',
-    'partnership.intro3': 'Afrika entwickelt sich schnell, mit neuen Ressourcenentdeckungen, wachsenden Infrastrukturen und steigendem Bedarf an internationaler Zusammenarbeit. Wir helfen Unternehmen, diese Möglichkeiten zu nutzen.',
+    'partnership.title': 'Wir verbinden Europa und Afrika – Geschäftspartner, Märkte und Chancen.',
+    'partnership.intro1': 'Afrika bietet enormes wirtschaftliches Potenzial, doch oft stehen Unternehmen vor Herausforderungen, wenn sie neue Märkte erschließen wollen. Wir sind die Brücke zwischen beiden Kontinenten und helfen Ihnen, die richtigen Partner zu finden.',
+    'partnership.intro2': 'Wir unterstützen Unternehmen aus Europa und Afrika dabei, erfolgreiche Geschäftsbeziehungen aufzubauen. Als Vermittler überwinden wir kulturelle, bürokratische und logistische Hürden und bringen die richtigen Partner zusammen.',
+    'partnership.intro3': 'Afrika entwickelt sich dynamisch, mit neuen Rohstofffunden, wachsender Infrastruktur und steigender Nachfrage nach internationalen Kooperationen. Wir helfen Unternehmen, diese Chancen zu nutzen.',
     'partnership.value1': 'Vertrauen',
     'partnership.value2': 'Interkulturelle Kompetenz',
     'partnership.value3': 'Wirtschaftliche Entwicklung',
-    'partnership.valueDescription': 'Unser Netzwerk basiert auf starken Beziehungen und sorgfältiger Auswahl.',
-    'partnership.service1.title': 'Business Partner Matchmaking',
-    'partnership.service1.description': 'Wir verbinden Unternehmen aus Europa und Afrika für Import, Export und Joint Ventures.',
-    'partnership.service2.title': 'Market Analysis & Consulting',
-    'partnership.service2.description': 'Möchten Sie in einen neuen Markt eintreten? Wir bieten Schlüsselinsights und lokale Kontakte.',
-    'partnership.service3.title': 'Logistics Services',
-    'partnership.service3.description': 'Wir ermöglichen Verbindungen mit zuverlässigen Logistikpartnern für grenzüberschreitenden Handel.',
-    'partnership.regions.westAfrica': 'West Africa',
-    'partnership.regions.northAfrica': 'North Africa',
-    'partnership.regions.other': 'Other Markets: We support clients based on their specific needs.',
+    'partnership.valueDescription': 'Unser Netzwerk basiert auf langjährigen Beziehungen und sorgfältiger Auswahl.',
+    'partnership.service1.title': ' Vermittlung von Handelspartnern',
+    'partnership.service1.description': 'Wir bringen Unternehmen aus Europa und Afrika zusammen – ob für den Import, Export oder Joint Ventures.',
+    'partnership.service2.title': 'Marktanalysen und Beratung',
+    'partnership.service2.description': 'Sie möchten in einen neuen Markt eintreten? Wir unterstützen Sie mit relevanten Informationen und lokalen Kontakten.',
+    'partnership.service3.title': 'Logistische Dienstleistungen',
+    'partnership.service3.description': 'Wir helfen bei der Vermittlung zuverlässiger Transport- und Logistiklösungen für grenzüberschreitende Geschäfte.',
+    'partnership.regions.westAfrica': 'Westafrika',
+    'partnership.regions.northAfrica': 'Nordafrika',
+    'partnership.regions.other': 'Andere Märkte: Wir unterstützen Kunden auf ihre Bedürfnisse abgestimmt.',
 
     // Contact Form
     'contact.form.name': 'Name',
@@ -189,6 +205,14 @@ const translations = {
     'services.logistics.description': 'Gestion logistique complète et entreposage',
     'services.trade.title': 'Commerce',
     'services.trade.description': 'Facilitation du commerce international et connexions commerciales',
+    'services.freightForwarding.title': 'Transport',
+    'services.freightForwarding.description': 'Solutions de transport adaptées á votre demande de service, transport national et international (maritime, aérien et routier), gestion et organisation compléte des transports',
+    'services.supplyChain.title': 'Logistique',
+    'services.supplyChain.description': 'Gestion efficace des flux, stockage et distribution, gestion de la chaîne d\'approvisionnement',
+    'services.procurement.title': 'Commerce',
+    'services.procurement.description': 'Achat et distribution, import/export de marchandises',
+    'services.businessMatching.title': 'Services de Courtage',
+    'services.businessMatching.description': 'Mise en relation des expéditeurs et des transporteurs, solutions commerciales personnalisées',
 
     // Contact section
     'contact.title': 'Contactez-nous',
@@ -235,10 +259,10 @@ const translations = {
 };
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('de');
 
   const t = (key: string): string => {
-    return translations[language as keyof typeof translations][key as keyof typeof translations['en']] || key;
+    return translations[language as keyof typeof translations][key as keyof typeof translations['de']] || key;
   };
 
   return (
