@@ -1,4 +1,8 @@
+import { useLanguage } from '../context/LanguageContext';
+
 export default function Hero() {
+  const { t } = useLanguage();
+  
   return (
     <div className="relative min-h-screen overflow-x-hidden">
       {/* Background image */}
@@ -20,10 +24,10 @@ export default function Hero() {
         {/* Left content */}
         <div className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
-            AM Agro Trade <span className="text-green-400">Services</span>
+            {t('hero.title')} <span className="text-green-400">Services</span>
           </h1>
           <p className="mt-6 text-base sm:text-lg lg:text-xl text-gray-200 max-w-xl leading-relaxed">
-            Efficiently connecting businesses and ensuring smooth operations across the entire supply chain
+            {t('hero.subtitle')}
           </p>
         </div>
 
@@ -39,8 +43,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">Fast Delivery</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">Efficient and timely transportation services</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature1.title')}</h3>
+                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature1.description')}</p>
                 </div>
               </div>
             </div>
@@ -54,8 +58,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">Secure Transport</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">Your cargo&apos;s safety is our priority</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature2.title')}</h3>
+                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature2.description')}</p>
                 </div>
               </div>
             </div>
@@ -69,8 +73,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">Global Network</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">Connected across continents</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature3.title')}</h3>
+                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature3.description')}</p>
                 </div>
               </div>
             </div>
