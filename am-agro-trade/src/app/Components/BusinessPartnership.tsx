@@ -121,8 +121,7 @@ const BusinessPartnership = () => {
         <motion.div 
           className="relative overflow-hidden rounded-3xl bg-emerald-900 text-white p-8 md:p-16 mb-32"
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-200px" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
         >
           {/* Base background */}
@@ -132,8 +131,7 @@ const BusinessPartnership = () => {
           <motion.div 
             className="absolute inset-0"
             initial={{ x: "100%" }}
-            whileInView={{ x: 0 }}
-            viewport={{ once: true, margin: "-200px" }}
+            animate={{ x: 0 }}
             transition={{
               duration: 2.5,
               ease: "easeOut",
@@ -148,8 +146,7 @@ const BusinessPartnership = () => {
           <motion.div 
             className="absolute inset-0"
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 0.4 }}
-            viewport={{ once: true, margin: "-200px" }}
+            animate={{ opacity: 0.4 }}
             transition={{
               duration: 2,
               delay: 0.8,
