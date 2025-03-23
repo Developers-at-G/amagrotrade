@@ -7,6 +7,7 @@ import ContactForm from './ContactForm/ContactForm'
 import BusinessPartnership from './Components/BusinessPartnership'
 import Navbar from './Components/Navbar'
 import { useLanguage } from './context/LanguageContext'
+import { Analytics } from '@vercel/analytics/react'
 
 export default function Home() {
   const { t } = useLanguage();
@@ -92,7 +93,7 @@ export default function Home() {
         </section>
 
         {/* Partnership section */}
-        <section id="partnership" className="py-8 sm:py-0 px-4 bg-emerald-50">
+        <section id="partnership" className="py-8 sm:py-16 px-4 bg-emerald-50">
           <motion.div 
             className="max-w-7xl mx-auto"
             {...fadeIn}
@@ -111,6 +112,7 @@ export default function Home() {
           </motion.div>
         </section>
       </div>
+      <Analytics />
     </main>
   )
 }
