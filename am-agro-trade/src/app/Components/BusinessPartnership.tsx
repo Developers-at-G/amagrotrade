@@ -124,7 +124,7 @@ const BusinessPartnership = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-emerald-50 min-h-screen relative overflow-hidden">
+    <section className="py-0 px-4 bg-emerald-50 min-h-screen relative overflow-hidden">
       {/* Replace SVG trade routes with subtle gradient lines */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-emerald-700 to-transparent top-1/4 transform -translate-y-1/2"></div>

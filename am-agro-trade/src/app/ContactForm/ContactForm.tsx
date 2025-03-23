@@ -49,7 +49,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="relative min-h-[600px] overflow-hidden bg-gradient-to-b from-emerald-50 to-white dark:from-emerald-950 dark:to-gray-900">
+      <div className="relative min-h-[600px] overflow-hidden bg-gradient-to-b from-emerald-50 to-white dark:from-emerald-950 dark:to-gray-900 rounded-3xl">
         {/* Animated background elements */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -75,6 +75,7 @@ const translations = {
     'hero.services.logistics': 'Logistics: Warehousing, distribution, supply chain management',
     'hero.services.trade': 'Trade: Procurement & sales of goods',
     'hero.services.brokerage': 'Brokerage: Connecting businesses in the industry',
+    'hero.description': 'Your trusted partner in freight forwarding, logistics, trade, and brokerage. We provide customized transport solutions, optimize trade processes, and ensure smooth business connections.',
 
     // Business Partnership Section
     'partnership.title': 'Connecting Europe and Africa – Business Partners, Markets & Opportunities',
@@ -175,6 +176,7 @@ const translations = {
     'hero.services.logistics': 'Logistik: Lagerung, Distribution',
     'hero.services.trade': 'Handel: Wareneinkauf & Vertrieb',
     'hero.services.brokerage': 'Vermittlung: Verbindung zwischen Transport- und Handelsunternehmen',
+    'hero.description': 'Ihr Partner für Spedition, Logistik, Handel und Vermittlung – zuverlässig, flexibel und effizient. Wir verbinden Unternehmen mit maßgeschneiderten Transport- und Logistiklösungen, optimieren Handelsprozesse und sorgen für eine reibungslose Vermittlung in der Branche.',
 
     // Business Partnership Section
     'partnership.title': 'Wir verbinden Europa und Afrika – Geschäftspartner, Märkte und Chancen.',
@@ -275,7 +277,8 @@ const translations = {
     'hero.services.logistics': 'Logistique : Stockage, distribution, gestion des flux',
     'hero.services.trade': 'Commerce : Achat et vente de marchandises',
     'hero.services.brokerage': 'Courtage : Mise en relation entre entreprises',
-
+    'hero.description': 'Votre partenaire de confiance dans les domaines de transport, logistique, commerce et courtage. Nous offrons des solutions de transport sur mesure, optimisons les processus commerciaux et assurons une intermédiation efficace dans le secteur.',
+    
     // Business Partnership Section
     'partnership.title': 'Connecter l\'Europe et l\'Afrique – Partenaires Commerciaux, Marchés & Opportunités',
     'partnership.intro1': 'Africa offre un potentiel économique immense, mais les entreprises rencontrent souvent des difficultés lorsqu\'elles entrent sur ces marchés. Nous réduisons la différence entre les deux continents et vous aidons à trouver les bons partenaires.',
