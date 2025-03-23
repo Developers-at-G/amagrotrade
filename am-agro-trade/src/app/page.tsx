@@ -44,16 +44,23 @@ export default function Home() {
   };
 
   const smoothReveal = {
-    initial: { opacity: 0, y: 100 },
+    initial: { 
+      opacity: 0, 
+      y: 30,  // Reduced from 100 to 30 for subtler movement
+    },
     whileInView: { 
       opacity: 1, 
       y: 0,
       transition: {
-        duration: 1.2,
-        ease: [0.25, 0.1, 0.25, 1], // Custom easing
+        duration: 0.8,  // Reduced from 1.2 to 0.8 for snappier animation
+        ease: "easeOut",  // Changed to simple easeOut for smoother motion
       }
     },
-    viewport: { once: true, margin: "-100px" }
+    viewport: { 
+      once: true, 
+      margin: "-50px",  // Changed from -100px to -50px to start animation sooner
+      amount: 0.3  // Only needs 30% of the element to be visible to start animating
+    }
   };
 
   const cardHoverEffect = {
@@ -90,7 +97,7 @@ export default function Home() {
         {/* About section with smooth parallax */}
         <motion.section
           id="about"
-          className="py-10 sm:py-20 px-4 bg-gradient-to-b from-white to-emerald-50 relative overflow-hidden"
+          className="py-8 sm:py-16 px-4 bg-gradient-to-b from-white to-emerald-50 relative overflow-hidden"
           style={{ y: parallaxY }}
         >
           <motion.div 
@@ -129,19 +136,26 @@ export default function Home() {
         </motion.section>
 
         {/* Why Choose Us section with interactive cards */}
-        <motion.section id="why-choose-us" className="py-10 sm:py-20 px-4 bg-emerald-50">
+        <motion.section id="why-choose-us" className="py-8 sm:py-16 px-4 bg-emerald-50">
           <div className="max-w-7xl mx-auto">
-            <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-10">
+            <motion.h2 
+              className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-emerald-800"
+              variants={smoothReveal}
+              initial="initial"
+              whileInView="whileInView"
+            >
+              {t('whyUs.title')}
+            </motion.h2>
+            <motion.div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
               {['expertise', 'solutions', 'network'].map((item, index) => (
                 <motion.div
                   key={item}
                   initial="rest"
                   whileHover="hover"
                   variants={cardHoverEffect}
-                  className="p-6 sm:p-8 bg-white rounded-xl shadow-lg transition-all duration-300"
+                  className="flex items-center justify-center text-center p-6 sm:p-8 bg-white rounded-xl shadow-lg transition-all duration-300 hover:bg-emerald-50"
                 >
                   <motion.div 
-                    className="mb-6"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ 
                       opacity: 1, 
@@ -153,13 +167,11 @@ export default function Home() {
                       }
                     }}
                     viewport={{ once: true }}
+                    className="space-y-2"
                   >
-                    <h3 className="text-2xl font-semibold mb-4 text-emerald-600">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-emerald-600">
                       {t(`whyUs.${item}.title`)}
                     </h3>
-                    <p className="text-gray-700 text-lg leading-relaxed">
-                      {t(`whyUs.${item}.description`)}
-                    </p>
                   </motion.div>
                 </motion.div>
               ))}
@@ -170,7 +182,7 @@ export default function Home() {
         {/* Services section with smooth reveal */}
         <motion.section 
           id="services" 
-          className="py-10 sm:py-20 px-4 bg-emerald-50"
+          className="py-8 sm:py-16 px-4 bg-emerald-50"
           variants={smoothReveal}
           initial="initial"
           whileInView="whileInView"
@@ -183,7 +195,7 @@ export default function Home() {
         {/* Replace the simple div with motion.section for partnership */}
         <motion.section 
           id="partnership" 
-          className="py-10 sm:py-20 px-4 bg-emerald-50"
+          className="py-8 sm:py-16 px-4 bg-emerald-50"
           variants={smoothReveal}
           initial="initial"
           whileInView="whileInView"
@@ -196,7 +208,7 @@ export default function Home() {
         {/* Update the contact section to match other sections */}
         <motion.section 
           id="contact" 
-          className="py-10 sm:py-16 px-4 bg-emerald-50"
+          className="py-8 sm:py-14 px-4 bg-emerald-50"
           variants={smoothReveal}
           initial="initial"
           whileInView="whileInView"

@@ -3,11 +3,30 @@ import { useLanguage } from '../context/LanguageContext';
 
 const BusinessPartnership = () => {
   const { scrollYProgress } = useScroll();
-  const regions = [
-    { area: 'West Africa', countries: ['Senegal', 'Gambia'] },
-    { area: 'North Africa', countries: ['Morocco', 'Tunisia', 'Algeria'] },
-  ];
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+
+  // Update regions with language-specific translations
+  const getRegions = () => {
+    switch (language) {
+      case 'fr':
+        return [
+          { area: 'Afrique de l\'Ouest', countries: ['Sénégal', 'Gambie'] },
+          { area: 'Afrique du Nord', countries: ['Maroc', 'Tunisie', 'Algérie'] },
+        ];
+      case 'de':
+        return [
+          { area: 'Westafrika', countries: ['Senegal', 'Gambia'] },
+          { area: 'Nordafrika', countries: ['Marokko', 'Tunesien', 'Algerien'] },
+        ];
+      default:
+        return [
+          { area: 'West Africa', countries: ['Senegal', 'Gambia'] },
+          { area: 'North Africa', countries: ['Morocco', 'Tunisia', 'Algeria'] },
+        ];
+    }
+  };
+
+  const regions = getRegions();
 
   const services = [
     {
@@ -290,7 +309,7 @@ const BusinessPartnership = () => {
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6, delay: index * 0.2 + 0.6 }}
                     >
-                      {t('partnership.valueDescription')}
+                      {t(`${valueKey}.description`)}
                     </motion.p>
                   </div>
                 </div>

@@ -47,39 +47,62 @@ export default function Hero() {
       
       {/* Content */}
       <div className="relative container mx-auto min-h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between px-2 sm:px-4">
-        {/* Left content */}
+        {/* Left content - Refined design */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24 bg-black/15 backdrop-blur-[2px] rounded-xl"
+          className="w-full lg:w-1/2 px-2 sm:px-4 lg:px-12 py-8 lg:py-24 rounded-xl relative overflow-hidden"
         >
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
-          >
-            {t('hero.title')} {' '}
-            <motion.span 
-              variants={glowVariants}
-              animate="animate"
-              className="text-green-400 inline-block drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
+          {/* Lighter backdrop that lets the image show through */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent backdrop-blur-[2px] rounded-xl" />
+
+          {/* Content wrapper */}
+          <div className="relative z-10">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]"
             >
-              Services
-            </motion.span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-6 text-base sm:text-lg lg:text-xl text-white font-medium max-w-xl leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]"
-          >
-            {t('hero.subtitle')}
-          </motion.p>
+              {t('hero.title')} {' '}
+              <motion.span 
+                variants={glowVariants}
+                animate="animate"
+                className="text-green-400 inline-block drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]"
+              >
+                Services
+              </motion.span>
+              {' '} 
+              <span className="text-white/90">e.K</span>
+            </motion.h1>
+
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="mt-6 text-base sm:text-lg lg:text-xl text-white/90 font-medium max-w-xl leading-relaxed drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)]"
+            >
+              {t('hero.subtitle')}
+            </motion.p>
+          </div>
+
+          {/* Subtle decorative element */}
+          <motion.div
+            animate={{
+              opacity: [0.1, 0.2, 0.1],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -left-1/4 -bottom-1/4 w-1/2 h-1/2 bg-green-400/10 rounded-full blur-3xl"
+          />
         </motion.div>
 
-        {/* Feature cards - visible on all screens */}
+        {/* Feature cards - Updated with service details */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center relative mt-8 lg:mt-0">
           <motion.div 
             variants={borderVariants}
@@ -90,7 +113,7 @@ export default function Hero() {
               backgroundSize: "200% 200%"
             }}
           >
-            {/* Feature Card 1 */}
+            {/* Freight Card */}
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -103,18 +126,15 @@ export default function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
-                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
+                  <span className="text-2xl">🚛</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature1.title')}</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature1.description')}</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.services.freight')}</h3>
                 </div>
               </div>
             </motion.div>
 
-            {/* Feature Card 2 */}
+            {/* Logistics Card */}
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -127,18 +147,15 @@ export default function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
-                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
+                  <span className="text-2xl">🏭</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature2.title')}</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature2.description')}</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.services.logistics')}</h3>
                 </div>
               </div>
             </motion.div>
 
-            {/* Feature Card 3 */}
+            {/* Trade Card */}
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -151,13 +168,31 @@ export default function Hero() {
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-green-400/20 rounded-lg">
-                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
-                  </svg>
+                  <span className="text-2xl">🛍️</span>
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.feature3.title')}</h3>
-                  <p className="text-gray-300 text-xs lg:text-sm">{t('hero.feature3.description')}</p>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.services.trade')}</h3>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Brokerage Card */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.0, duration: 0.8 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(74, 222, 128, 0.2)"
+              }}
+              className="bg-white/10 backdrop-blur-lg p-3 sm:p-4 lg:p-6 rounded-xl border border-white/20 shadow-xl lg:translate-x-4 max-w-md"
+            >
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-green-400/20 rounded-lg">
+                  <span className="text-2xl">🤝</span>
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold text-base lg:text-lg">{t('hero.services.brokerage')}</h3>
                 </div>
               </div>
             </motion.div>
