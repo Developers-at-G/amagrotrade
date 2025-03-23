@@ -12,20 +12,24 @@ import { Analytics } from '@vercel/analytics/react'
 export default function Home() {
   const { t } = useLanguage();
 
-  // Keep just a simple fade-in animation
-  const fadeIn = {
-    initial: { opacity: 0 },
-    whileInView: { 
-      opacity: 1,
-      transition: {
-        duration: 0.8
-      }
+  // Enhanced animation variants
+  const sectionVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50
     },
-    viewport: { once: true }
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
+    }
   };
 
   return (
-    <main>
+    <main className="bg-emerald-50">
       <Navbar />
       <div className="min-h-screen pt-16">
         {/* Hero section */}
@@ -34,11 +38,15 @@ export default function Home() {
         </section>
 
         {/* About section */}
-        <section id="about" className="py-8 sm:py-16 px-4 bg-gradient-to-b from-white to-emerald-50">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeIn}
-          >
+        <motion.section 
+          id="about" 
+          className="py-8 sm:py-16 px-4 bg-gradient-to-b from-white to-emerald-50"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8 text-emerald-800">
               {t('about.title')}
             </h2>
@@ -53,15 +61,19 @@ export default function Home() {
                 {t('about.description2')}
               </p>
             </div>
-          </motion.div>
-        </section>
+          </div>
+        </motion.section>
 
         {/* Why Choose Us section */}
-        <section id="why-choose-us" className="py-8 sm:py-16 px-4 bg-emerald-50">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeIn}
-          >
+        <motion.section 
+          id="why-choose-us" 
+          className="py-8 sm:py-16 px-4 bg-emerald-50"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-emerald-800">
               {t('whyUs.title')}
             </h2>
@@ -79,38 +91,50 @@ export default function Home() {
                 </div>
               ))}
             </div>
-          </motion.div>
-        </section>
+          </div>
+        </motion.section>
 
         {/* Services section */}
-        <section id="services" className="py-8 sm:py-16 px-4 bg-emerald-50">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeIn}
-          >
+        <motion.section 
+          id="services" 
+          className="py-8 sm:py-16 px-4 bg-emerald-50"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <div className="max-w-7xl mx-auto">
             <Services />
-          </motion.div>
-        </section>
+          </div>
+        </motion.section>
 
         {/* Partnership section */}
-        <section id="partnership" className="py-8 sm:py-16 px-4 bg-emerald-50">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeIn}
-          >
+        <motion.section 
+          id="partnership" 
+          className="py-8 sm:py-12 px-4 bg-emerald-50"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <div className="max-w-7xl mx-auto">
             <BusinessPartnership />
-          </motion.div>
-        </section>
+          </div>
+        </motion.section>
 
         {/* Contact section */}
-        <section id="contact" className="py-8 sm:py-14 px-4 bg-emerald-50">
-          <motion.div 
-            className="max-w-7xl mx-auto"
-            {...fadeIn}
-          >
+        <motion.section 
+          id="contact" 
+          className="py-8 sm:py-14 px-4 bg-emerald-50"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={sectionVariants}
+        >
+          <div className="max-w-7xl mx-auto">
             <ContactForm />
-          </motion.div>
-        </section>
+          </div>
+        </motion.section>
       </div>
       <Analytics />
     </main>

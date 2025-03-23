@@ -138,7 +138,7 @@ const BusinessPartnership = () => {
       >
         {/* Enhanced Hero Section with delayed slide-in animation */}
         <motion.div 
-          className="relative overflow-hidden rounded-3xl bg-emerald-900 text-white p-8 md:p-16 mb-32"
+          className="relative overflow-hidden rounded-3xl bg-emerald-900 text-white p-8 md:p-16 mb-16 md:mb-24"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
