@@ -59,17 +59,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white/80 backdrop-blur-sm shadow-md fixed w-full z-50 border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4">
+    <nav className="bg-white backdrop-blur-sm shadow-md fixed w-full z-50 border-b border-gray-100">
+      <div className="max-w-9xl mx-auto px-4 py-2">
         <div className="flex justify-between h-20">
           {/* Logo/Brand */}
-          <div className="flex items-center">
+          <div className="flex items-center pl-0 md:p-8 md-max:px-0">
             <button 
               onClick={() => scrollToSection('hero')} 
               className="text-2xl font-bold text-green-800 hover:text-green-700 transition-colors flex items-center"
             >
-              {/* <img src="/logo.png" alt="AM Agro Trade" className="h-12 w-auto mr-3" /> */}
-              <span>AM Agro Trade</span>
+              <img 
+                src="/images/TransparentLogo.png" 
+                alt="AM Agro Trade" 
+                className="h-24 md:h-40 w-auto object-contain"
+              />
             </button>
           </div>
 

@@ -5,6 +5,9 @@ import { LanguageProvider } from './context/LanguageContext';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: 'images/favicon.ico',
+  },
   title: "Am Agrotradeservices",
   description: "Am Agrotradeservices",
 };
