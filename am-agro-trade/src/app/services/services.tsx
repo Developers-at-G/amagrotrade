@@ -10,7 +10,7 @@ export default function Services() {
     {
       icon: <TbTruckDelivery className="w-12 h-12" />,
       key: 'freightForwarding',
-      subServices: ['shipping', 'management', 'express']
+      subServices: ['shipping', 'management', 'express', 'brokerage']
     },
     {
       icon: <TbPackages className="w-12 h-12" />,
@@ -20,7 +20,7 @@ export default function Services() {
     {
       icon: <TbWorld className="w-12 h-12" />,
       key: 'procurement',
-      subServices: ['import', 'export', 'brokerage']
+      subServices: ['import', 'export']
     }
   ];
 

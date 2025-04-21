@@ -46,6 +46,7 @@ const translations = {
     'services.freightForwarding.shipping': 'National & international shipping (air and sea freight)',
     'services.freightForwarding.management': 'Comprehensive freight management',
     'services.freightForwarding.express': 'Direct and express deliveries',
+    'services.freightForwarding.brokerage': 'Business brokerage',
     'services.supplyChain.title': 'Logistics & Supply Chain',
     'services.supplyChain.description': 'Efficient supply chain management solutions',
     'services.supplyChain.warehousing': 'Warehousing services',
@@ -55,7 +56,6 @@ const translations = {
     'services.procurement.description': 'Complete import/export and business matching services',
     'services.procurement.import': 'Import services',
     'services.procurement.export': 'Export services',
-    'services.procurement.brokerage': 'Business brokerage',
     'services.businessMatching.title': 'Business Matching',
     'services.businessMatching.description': 'Matching shippers with carriers, customized business solutions',
 
@@ -127,9 +127,9 @@ const translations = {
 
     // Why Choose Us section
     'whyUs.title': 'Warum Uns Wählen?',
-    'whyUs.expertise.title': 'Industry Expertise & Experience',
-    'whyUs.solutions.title': 'Flexibility in Finding the Best Solution',
-    'whyUs.network.title': 'A Strong Network of Partners',
+    'whyUs.expertise.title': 'Branchenwissen & langjährige Erfahrungen',
+    'whyUs.solutions.title': 'Flexibilität und schnelle Reaktionszeiten',
+    'whyUs.network.title': 'Ein starkes Netzwerk aus Partnern',
     'whyUs.expertise.description': 'Jahrelange Erfahrung und fundiertes Branchenwissen für besseren Service',
     'whyUs.solutions.description': 'Maßgeschneiderte Ansätze für Ihre spezifischen Anforderungen',
     'whyUs.network.description': 'Umfangreiche Partnerschaften für zuverlässige und effiziente Servicebereitstellung',
@@ -147,6 +147,7 @@ const translations = {
     'services.freightForwarding.shipping': 'Nationale & internationale Transporte (See- und Luftfracht)',
     'services.freightForwarding.management': 'Umfassendes Frachtmanagement',
     'services.freightForwarding.express': 'Direkt- und Sonderfahrten',
+    'services.freightForwarding.brokerage': 'Vermittlung von Handelspartnern',
     'services.supplyChain.title': 'Logistik',
     'services.supplyChain.description': 'Effiziente Warenströme und Logistikmanagement',
     'services.supplyChain.warehousing': 'Lagerhaltung',
@@ -156,7 +157,6 @@ const translations = {
     'services.procurement.description': 'Import/Export und Geschäftsvermittlung',
     'services.procurement.import': 'Import von Waren',
     'services.procurement.export': 'Export von Waren',
-    'services.procurement.brokerage': 'Vermittlung von Transportaufträgen',
     'services.businessMatching.title': 'Vermittlung',
     'services.businessMatching.description': 'Vermittlung von Transportaufträgen, Partnernetzwerk für Spedition, Logistik und Handel',
 
@@ -248,6 +248,7 @@ const translations = {
     'services.freightForwarding.shipping': 'Transport national et international (maritime et aérien)',
     'services.freightForwarding.management': 'Gestion complète des transports',
     'services.freightForwarding.express': 'Livraisons directes et express',
+    'services.freightForwarding.brokerage': 'Courtage commercial',
     'services.supplyChain.title': 'Logistique',
     'services.supplyChain.description': 'Gestion efficace des flux logistiques',
     'services.supplyChain.warehousing': 'Services de stockage',
