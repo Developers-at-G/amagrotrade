@@ -81,16 +81,8 @@ const ContactForm = () => {
               <div className="w-24 h-1 bg-emerald-500 mx-auto rounded-full"></div>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                {
-                  title: 'AM Agro Trade',
-                  content: 'Your Trusted Agricultural Partner',
-                  icon: (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  ),
-                  delay: 0.3
-                },
                 {
                   title: t('contact.info.phone'),
                   content: (
@@ -112,7 +104,7 @@ const ContactForm = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   ),
                   href: 'tel:+4961318888804',
-                  delay: 0.5
+                  delay: 0.4
                 },
                 {
                   title: t('contact.info.email'),
@@ -122,7 +114,16 @@ const ContactForm = () => {
                   ),
                   href: 'mailto:info@am-agrotradeservices.de',
                   delay: 0.6
-                }
+                },
+                {
+                  title: 'AM Agro Trade',
+                  content: 'Your Trusted Agricultural Partner',
+                  icon: (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  ),
+                  delay: 0.3,
+                  className: "md:col-span-2 lg:col-span-1"
+                },
               ].map((item, index) => (
                 <motion.div 
                   key={index}
@@ -130,10 +131,9 @@ const ContactForm = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: item.delay }}
-                  className="relative group"
+                  className={`relative group ${item.className || ''}`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl blur-sm group-hover:blur transition-all duration-300"></div>
-                  <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                  <div className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                     <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6 mx-auto">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         {item.icon}
@@ -145,12 +145,12 @@ const ContactForm = () => {
                     {item.href ? (
                       <a 
                         href={item.href}
-                        className="text-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 block transition-colors"
+                        className="text-center text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 block transition-colors mt-auto"
                       >
                         {item.content}
                       </a>
                     ) : (
-                      <p className="text-center text-gray-600 dark:text-gray-300">
+                      <p className="text-center text-gray-600 dark:text-gray-300 mt-auto">
                         {item.content}
                       </p>
                     )}
