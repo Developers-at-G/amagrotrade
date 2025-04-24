@@ -110,6 +110,7 @@ const translations = {
     'contact.form.error': 'Failed to send message. Please try again.',
     'contact.info.phone': 'Phone',
     'contact.info.email': 'Email',
+    'contact.info.fax': 'Fax',
   },
   de: {
     // Navigation
@@ -211,6 +212,7 @@ const translations = {
     'contact.form.error': 'Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut.',
     'contact.info.phone': 'Telefon',
     'contact.info.email': 'E-Mail',
+    'contact.info.fax': 'Fax',
   },
   fr: {
     // Navigation
@@ -313,6 +315,7 @@ const translations = {
     'contact.form.error': 'Échec de l\'envoi du message. Veuillez réessayer.',
     'contact.info.phone': 'Téléphone',
     'contact.info.email': 'E-mail',
+    'contact.info.fax': 'Fax',
   }
 };
 
