@@ -6,6 +6,7 @@ import Services from './services/services'
 import ContactForm from './ContactForm/ContactForm'
 import BusinessPartnership from './Components/BusinessPartnership'
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 import { useLanguage } from './context/LanguageContext'
 import { Analytics } from '@vercel/analytics/react'
 
@@ -136,6 +137,7 @@ export default function Home() {
           </div>
         </motion.section>
       </div>
+      <Footer />
       <Analytics />
     </main>
   )
