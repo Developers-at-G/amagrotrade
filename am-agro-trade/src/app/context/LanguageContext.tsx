@@ -12,11 +12,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   en: {
     // Navigation
-    'nav.about': 'About',
+    'nav.about': 'About Us',
     'nav.whyUs': 'Why Us',
     'nav.services': 'Services',
     'nav.partnership': 'Partnership',
     'nav.contact': 'Contact',
+    'back': 'Back',
 
     // About section
     'about.title': 'About Us',
@@ -111,6 +112,7 @@ const translations = {
     'contact.info.phone': 'Phone',
     'contact.info.email': 'Email',
     'contact.info.fax': 'Fax',
+    'contact.info.partner': 'Your Trusted Agricultural Partner',
   },
   de: {
     // Navigation
@@ -119,6 +121,7 @@ const translations = {
     'nav.services': 'Dienstleistungen',
     'nav.partnership': 'Partnerschaft',
     'nav.contact': 'Kontakt',
+    'back': 'Zurück',
 
     // About section
     'about.title': 'Über Uns',
@@ -213,14 +216,16 @@ const translations = {
     'contact.info.phone': 'Telefon',
     'contact.info.email': 'E-Mail',
     'contact.info.fax': 'Fax',
+    'contact.info.partner': 'Ihr vertrauenswürdiger landwirtschaftlicher Partner',
   },
   fr: {
     // Navigation
-    'nav.about': 'À Propos',
+    'nav.about': 'À Propos de Nous',
     'nav.whyUs': 'Pourquoi Nous',
     'nav.services': 'Services',
     'nav.partnership': 'Partenariat',
     'nav.contact': 'Contact',
+    'back': 'Retour',
 
     // About section
     'about.title': 'À Propos de Nous',
@@ -284,9 +289,9 @@ const translations = {
     
     // Business Partnership Section
     'partnership.title': 'Connecter l\'Europe et l\'Afrique – Partenaires Commerciaux, Marchés & Opportunités',
-    'partnership.intro1': 'Africa offre un potentiel économique immense, mais les entreprises rencontrent souvent des difficultés lorsqu\'elles entrent sur ces marchés. Nous réduisons la différence entre les deux continents et vous aidons à trouver les bons partenaires.',
+    'partnership.intro1': 'L\'Afrique offre un potentiel économique immense, mais les entreprises rencontrent souvent des difficultés lorsqu\'elles entrent sur ces marchés. Nous réduisons la différence entre les deux continents et vous aidons à trouver les bons partenaires.',
     'partnership.intro2': 'Nous soutenons les entreprises d\'Europe et d\'Afrique dans la mise en place de relations commerciales réussies. En tant que médiateur, nous surmontons les barrières culturelles, bureaucratiques et logistiques pour connecter les bons partenaires.',
-    'partnership.intro3': 'Afrique évolue rapidement, avec de nouvelles découvertes de ressources, des infrastructures en croissance et une demande croissante pour la coopération internationale. Nous aidons les entreprises à exploiter ces opportunités.',
+    'partnership.intro3': 'L\'Afrique évolue rapidement, avec de nouvelles découvertes de ressources, des infrastructures en croissance et une demande croissante pour la coopération internationale. Nous aidons les entreprises à exploiter ces opportunités.',
     'partnership.value1': 'La Confiance',
     'partnership.value1.description': 'Notre réseau repose sur des relations solides et une sélection rigoureuse.',
     'partnership.value2': 'La Compétence interculturelle',
@@ -310,12 +315,13 @@ const translations = {
     'contact.form.message': 'Message',
     'contact.form.submit': 'Envoyer le message',
     'contact.form.sending': 'Envoi en cours...',
-    'contact.info.title': 'Informations de contact',
+    'contact.info.title': 'Contact',
     'contact.form.success': 'Message envoyé avec succès !',
     'contact.form.error': 'Échec de l\'envoi du message. Veuillez réessayer.',
     'contact.info.phone': 'Téléphone',
     'contact.info.email': 'E-mail',
     'contact.info.fax': 'Fax',
+    'contact.info.partner': 'Votre partenaire agricole de confiance',
   }
 };
 
