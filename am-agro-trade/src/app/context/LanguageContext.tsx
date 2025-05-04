@@ -112,7 +112,7 @@ const translations = {
     'contact.info.phone': 'Phone',
     'contact.info.email': 'Email',
     'contact.info.fax': 'Fax',
-    'contact.info.partner': 'Your Trusted Agricultural Partner',
+    'contact.info.partner': 'Your trusted partner in for agricultural logistics',
   },
   de: {
     // Navigation
@@ -216,7 +216,7 @@ const translations = {
     'contact.info.phone': 'Telefon',
     'contact.info.email': 'E-Mail',
     'contact.info.fax': 'Fax',
-    'contact.info.partner': 'Ihr vertrauenswürdiger landwirtschaftlicher Partner',
+    'contact.info.partner': 'Ihr zuverlässiger Partner für Agrarlogistik',
   },
   fr: {
     // Navigation
@@ -321,7 +321,7 @@ const translations = {
     'contact.info.phone': 'Téléphone',
     'contact.info.email': 'E-mail',
     'contact.info.fax': 'Fax',
-    'contact.info.partner': 'Votre partenaire agricole de confiance',
+    'contact.info.partner': 'Votre partenaire fiable en logistique agricole',
   }
 };
 
