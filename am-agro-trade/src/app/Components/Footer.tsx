@@ -12,12 +12,18 @@ export default function Footer() {
           <div className="text-sm">
             © {new Date().getFullYear()} AM Agro Trade & Services.
           </div>
-          <div className="text-sm">
+          <div className="flex space-x-6 text-sm">
             <Link 
               href="/impressum" 
               className="hover:text-emerald-200 transition-colors duration-200"
             >
               Impressum
+            </Link>
+            <Link 
+              href="/agb" 
+              className="hover:text-emerald-200 transition-colors duration-200"
+            >
+              AGB
             </Link>
           </div>
         </div>
