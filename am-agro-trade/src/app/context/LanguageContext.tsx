@@ -112,7 +112,7 @@ const translations = {
     'contact.info.phone': 'Phone',
     'contact.info.email': 'Email',
     'contact.info.fax': 'Fax',
-    'contact.info.partner': 'Your trusted partner for agricultural logistics',
+    'contact.info.partner': 'Your partner for agricultural logistics',
   },
   de: {
     // Navigation
